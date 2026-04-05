@@ -119,7 +119,7 @@ export function basisPointsToPercentage(basisPoints: number): string {
 // ---------------------------------------------------------------------------
 
 export interface Vote {
-  campaignId: string;
+  causeId: string;
   voter: string;
   voteType: 'upvote' | 'downvote';
   timestamp: Date;
