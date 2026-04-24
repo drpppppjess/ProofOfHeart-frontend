@@ -166,10 +166,10 @@ export default function VotingComponent({
         </div>
       </div>
 
-      {/* Approval rate bar */}
-      <div className="w-full bg-zinc-200 dark:bg-zinc-700 rounded-full h-2">
+      {/* Approval rate bar — green portion grows with approval, red background shows rejections */}
+      <div className="w-full bg-red-300 dark:bg-red-900/60 rounded-full h-2">
         <div
-          className="bg-gradient-to-r from-green-500 to-emerald-400 h-2 rounded-full transition-all duration-300"
+          className="bg-green-500 h-2 rounded-full transition-all duration-300"
           style={{
             width: `${totalVotes > 0 ? (upvotes / totalVotes) * 100 : 50}%`,
           }}
