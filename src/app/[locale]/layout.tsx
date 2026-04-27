@@ -12,6 +12,12 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
 import "../globals.css";
 
+// #138 — Pre-render locale shells at build time so /en and /es appear in the
+// static-pages section of the build output instead of being dynamic routes.
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export const metadata: Metadata = {
   title: "ProofOfHeart",
   description:
